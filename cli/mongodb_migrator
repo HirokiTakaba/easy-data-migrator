@@ -1,0 +1,21 @@
+require 'rubygems'
+require 'thor'
+require './script/executer/mongodb_migrate_controller.rb'
+
+class MongodbMigrator < Thor
+
+  desc "save [env] [import_file_path]", "save data"
+  def save(env, import_file_path)
+    executor = MongodbMigrateController.new()
+    executor.save(env, import_file_path)
+  end
+
+  desc "remove_all [env] [import_file_path]", "remove all data"
+    def remove_all(env, import_file_path)
+      executor = MongodbMigrateController.new()
+      executor.remove_all(env, import_file_path)
+    end
+
+end
+
+MongodbMigrator.start(ARGV)

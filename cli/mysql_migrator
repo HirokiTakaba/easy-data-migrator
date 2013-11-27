@@ -1,0 +1,21 @@
+require 'rubygems'
+require 'thor'
+require './script/executer/mysql_migrate_controller.rb'
+
+class MysqlMigrator < Thor
+
+  desc "create_table [env] [import_file_path]", "create table"
+  def create_table(env, import_file_path)
+    executor = MysqlMigrateController.new()
+    executor.create_table(env, import_file_path)
+  end
+
+  desc "upload [env] [import_file_path]", "upload data"
+  def upload(env, import_file_path)
+    executor = MysqlMigrateController.new()
+    executor.upload(env, import_file_path)
+  end
+
+end
+
+MysqlMigrator.start(ARGV)

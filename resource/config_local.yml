@@ -1,0 +1,41 @@
+#
+# MySQLの接続設定
+#
+mysql:
+  hostname: 'localhost'
+  username: ''
+  password: ''
+  database: ''
+  port: ''
+
+#
+# MySQLのテーブル設定
+#
+mysql_setting:
+  charactor_set: 'utf8'
+  collate: 'utf8_general_ci'
+  add_datetime_columns:
+  - 'upd_datetime'
+  - 'ins_datetime'
+
+#
+# MongoDBの接続設定
+#
+#mongodb:
+#  hostname: 'localhost'
+#  username: ''
+#  password: ''
+#  database: 'easy_data_migrator'
+#  port: ' 27017'
+
+#
+# データストアに共通する設定
+#
+# ignore_tables: 無視するテーブルをリストで指定
+# insert_only_tables: 追加しか行わないテーブルをリストで指定
+#
+datastore_setting:
+  ignore_tables:
+  - 'ignore_table'
+  insert_only_tables:
+  - 'insert_only_table'

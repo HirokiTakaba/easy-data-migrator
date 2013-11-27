@@ -1,0 +1,29 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bson (1.9.2)
+    bson_ext (1.9.2)
+      bson (~> 1.9.2)
+    csvparser (0.1.1)
+    dbi (0.4.5)
+      deprecated (= 2.0.1)
+    deprecated (2.0.1)
+    fastercsv (1.5.5)
+    mongo (1.9.2)
+      bson (~> 1.9.2)
+    mysql2 (0.3.13)
+    ruby-mysql (2.9.11)
+    thor (0.18.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bson_ext
+  csvparser
+  dbi
+  fastercsv
+  mongo
+  mysql2 (= 0.3.13)
+  ruby-mysql
+  thor
